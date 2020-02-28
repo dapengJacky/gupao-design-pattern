@@ -19,8 +19,14 @@ public class ContainerSingleton {
     public static Object getInstance(Class clazz){
         if(!instanceMap.containsKey(clazz)){
             try {
-                Object instance = clazz.newInstance();
-                instanceMap.put(clazz,instance);
+                //加锁防止线程不安全问题
+                synchronized (ContainerSingleton.class){
+                    //判断防止创建多个实例，浪费内存
+                    if(instanceMap.get(clazz)==null){
+                        Object instance = clazz.newInstance();
+                        instanceMap.put(clazz,instance);
+                    }
+                }
             }catch (Exception e){
                 e.printStackTrace();
             }
