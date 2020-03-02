@@ -4,6 +4,7 @@ import gupao.singleton.hungry.HungrySingleton;
 import gupao.singleton.lazy.LazyDoubleCheckSingleton;
 import gupao.singleton.lazy.LazySingleton;
 import gupao.singleton.lazy.LazyStaticInnerClassSingleton;
+import gupao.singleton.register.ContainerSingleton;
 import gupao.singleton.threadlocal.ThreadLocalSingleton;
 
 /**
@@ -19,13 +20,15 @@ public class ExecutorThread implements Runnable {
 //        LazyDoubleCheckSingleton instance=LazyDoubleCheckSingleton.getInstance();
 //        LazyStaticInnerClassSingleton instance=LazyStaticInnerClassSingleton.getInstance();
 
-        ThreadLocalSingleton instance1= ThreadLocalSingleton.getInstance();
-        ThreadLocalSingleton instance2= ThreadLocalSingleton.getInstance();
-        ThreadLocalSingleton instance3= ThreadLocalSingleton.getInstance();
-        ThreadLocalSingleton instance4= ThreadLocalSingleton.getInstance();
-        System.out.println(Thread.currentThread().getName()+":"+instance1);
-        System.out.println(Thread.currentThread().getName()+":"+instance2);
-        System.out.println(Thread.currentThread().getName()+":"+instance3);
-        System.out.println(Thread.currentThread().getName()+":"+instance4);
+//        ThreadLocalSingleton instance1= ThreadLocalSingleton.getInstance();
+//        ThreadLocalSingleton instance2= ThreadLocalSingleton.getInstance();
+//        ThreadLocalSingleton instance3= ThreadLocalSingleton.getInstance();
+//        ThreadLocalSingleton instance4= ThreadLocalSingleton.getInstance();
+//        System.out.println(Thread.currentThread().getName()+":"+instance1);
+//        System.out.println(Thread.currentThread().getName()+":"+instance2);
+//        System.out.println(Thread.currentThread().getName()+":"+instance3);
+//        System.out.println(Thread.currentThread().getName()+":"+instance4);
+        Object instance = ContainerSingleton.getInstance(ContainerSingleton.class);
+        System.out.println(Thread.currentThread().getName()+":"+instance);
     }
 }

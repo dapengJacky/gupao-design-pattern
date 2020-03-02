@@ -7,7 +7,7 @@ package gupao.singleton.lazy;
  */
 public class LazyDoubleCheckSingleton {
 
-    private static LazyDoubleCheckSingleton instance;
+    private volatile static LazyDoubleCheckSingleton instance;//volatile是解决CPU指令重排序的问题
 
     private LazyDoubleCheckSingleton(){
         //代码不够优雅
@@ -28,6 +28,9 @@ public class LazyDoubleCheckSingleton {
                 //第二次校验防止被多次实例化替换，浪费资源
                 if (instance==null){
                     instance = new LazyDoubleCheckSingleton();
+                    //1.分配内存给这个对象
+                    //2.初始化对象
+                    //3.设置 lazy 指向刚分配的内存地址
                 }
             }
         }

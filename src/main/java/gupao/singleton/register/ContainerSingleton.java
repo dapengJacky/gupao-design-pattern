@@ -12,7 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class ContainerSingleton {
 
-    private static Map<Class,Object> instanceMap = new ConcurrentHashMap<Class,Object>();
+    private static final Map<Class,Object> instanceMap = new ConcurrentHashMap<Class,Object>();
 
     private ContainerSingleton(){}
 
@@ -20,7 +20,7 @@ public class ContainerSingleton {
         if(!instanceMap.containsKey(clazz)){
             try {
                 //加锁防止线程不安全问题
-                synchronized (ContainerSingleton.class){
+                synchronized (instanceMap){
                     //判断防止创建多个实例，浪费内存
                     if(instanceMap.get(clazz)==null){
                         Object instance = clazz.newInstance();
