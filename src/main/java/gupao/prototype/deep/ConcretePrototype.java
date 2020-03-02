@@ -1,5 +1,7 @@
 package gupao.prototype.deep;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import lombok.Data;
 
 import java.io.*;
@@ -43,6 +45,12 @@ public class ConcretePrototype implements Cloneable, Serializable {
             e.printStackTrace();
             return null;
         }
+    }
+
+    public ConcretePrototype jsonClone(){
+        ConcretePrototype prototype=this;
+        ConcretePrototype cloneObj = JSON.toJavaObject((JSON) JSONObject.toJSON(prototype), ConcretePrototype.class);
+        return cloneObj;
     }
 
     @Override
