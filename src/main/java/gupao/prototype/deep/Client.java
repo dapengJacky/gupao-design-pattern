@@ -20,7 +20,8 @@ public class Client {
         hobbies.add("乒乓球");
         prototype.setHobbies(hobbies);
 
-        ConcretePrototype clonePrototype = prototype.deepClone();
+//        ConcretePrototype clonePrototype = prototype.deepClone();
+        ConcretePrototype clonePrototype = prototype.jsonClone();
         clonePrototype.getHobbies().add("Swimming");
         System.out.println("原型对象："+prototype);
         System.out.println("克隆对象："+clonePrototype);
