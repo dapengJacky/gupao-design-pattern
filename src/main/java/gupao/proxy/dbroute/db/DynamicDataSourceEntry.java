@@ -1,4 +1,4 @@
-package gupao.proxy.dbroute;
+package gupao.proxy.dbroute.db;
 
 /**
  * @author peng.chen12@hand-china.com
