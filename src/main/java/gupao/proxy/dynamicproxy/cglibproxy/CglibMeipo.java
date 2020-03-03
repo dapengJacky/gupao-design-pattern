@@ -8,7 +8,7 @@ import java.lang.reflect.Method;
 
 /**
  * @author peng.chen12@hand-china.com
- * @description 继承关系，代理类无需实现同一接口
+ * @description 继承关系，目标代理类无需实现接口
  * @date 2020/3/2
  */
 public class CglibMeipo implements MethodInterceptor {
