@@ -13,4 +13,8 @@ public class Zhangsan implements IPerson {
         System.out.println("30万");
     }
 
+    @Override
+    public void testParam(String param) {
+        System.out.println("代理模式添加参数:"+param);
+    }
 }

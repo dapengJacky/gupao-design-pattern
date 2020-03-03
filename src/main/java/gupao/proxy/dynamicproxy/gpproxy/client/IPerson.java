@@ -9,4 +9,6 @@ public interface IPerson {
 
     void buyInsure();
 
+    void testParam(String param);
+
 }

@@ -9,6 +9,7 @@ public class Test {
         GpMeipo gpMeipo = new GpMeipo();
         IPerson zhangsan = gpMeipo.getInstance(new Zhangsan());
         zhangsan.findLove();
+        zhangsan.testParam("I love u");
 
 
 //        IPerson zhaoliu = jdkMeipo.getInstance(new ZhaoLiu());
