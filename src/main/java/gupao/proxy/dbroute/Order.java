@@ -1,4 +1,4 @@
-package gupao.proxy.staticproxy.dbroute;
+package gupao.proxy.dbroute;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package gupao.proxy.staticproxy.dbroute;
+package gupao.proxy.dbroute;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
