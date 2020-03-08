@@ -5,10 +5,10 @@ package gupao.facade;
  * @description 物流
  * @date 2020/3/5
  */
-public class OrderLogistic {
+public class OrderShippingService {
 
     public String shippingProd(GiftInfo info){
-        System.out.println("商品已包裹，正运往目的地");
+        System.out.println(info.getName()+"商品进入物流系统");
         return "666";//返回物流单号
     }
 }

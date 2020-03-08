@@ -8,7 +8,7 @@ import gupao.facade.exception.CommonException;
  * 校验积分和库存
  * @date 2020/3/5
  */
-public class OrderQualify {
+public class OrderQualifyService {
 
     public boolean qualifyScoreAndInv(GiftInfo info){
         User user = new User();
@@ -17,7 +17,7 @@ public class OrderQualify {
         }else if(info.getScore()>user.getScore()){
             throw new CommonException("用户积分不足");
         }else{
-            System.out.println("提交订单成功，请支付！！");
+            System.out.println("校验"+info.getName()+"成功，"+"提交订单成功，请支付！！");
             return true;
         }
     }

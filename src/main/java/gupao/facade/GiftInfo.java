@@ -13,4 +13,10 @@ public class GiftInfo {
     private Integer score = 5;
 
     private Integer inv = 1;
+
+    private String name;
+
+    public GiftInfo(String name) {
+        this.name = name;
+    }
 }

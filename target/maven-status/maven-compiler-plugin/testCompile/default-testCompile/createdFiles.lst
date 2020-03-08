@@ -1,0 +1,5 @@
+gupao\singlton\EnumSingletonTest.class
+gupao\singlton\ReflectDestroyTest.class
+gupao\singlton\ExecutorThread.class
+gupao\singlton\SingletonTest.class
+gupao\singlton\ThreadLocalSingletonTest.class

@@ -5,10 +5,10 @@ package gupao.facade;
  * @description
  * @date 2020/3/5
  */
-public class OrderPay {
+public class OrderPayService {
 
     public boolean pay(GiftInfo info){
-        System.out.println("商品支付成功");
+        System.out.println(info.getName()+"商品积分支付成功");
         return true;
     }
 }
