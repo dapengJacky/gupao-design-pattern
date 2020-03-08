@@ -3,7 +3,7 @@ package gupao.decorator.v1;
 /**
  * Created by Tom.
  */
-public class BattercakeWithEggAndSauage extends BattercakeWithEgg {
+public class BatterCakeWithEggAndSausage extends BattercakeWithEgg {
 
     protected String getMsg(){ return super.getMsg() + "+1根香肠";}
 

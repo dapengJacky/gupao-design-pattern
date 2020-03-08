@@ -1,4 +1,4 @@
-package gupao.decorator.homework;
+package gupao.decorator.homework.my;
 
 import java.util.List;
 
@@ -7,16 +7,16 @@ import java.util.List;
  * @description
  * @date 2020/3/5
  */
-public class TeacherPrivilegeDecorator extends PrivilegeDecorator {
+public class LoginPrivilegeDecorator extends PrivilegeDecorator {
 
-    public TeacherPrivilegeDecorator(IPrivilege privilege) {
+    public LoginPrivilegeDecorator(IPrivilege privilege) {
         super(privilege);
     }
 
     @Override
     public List<String> getFunction() {
         List<String> function = super.getFunction();
-        function.addAll(PrivilegeConstants.FunctionPrivilege.TEACHER);
+        function.addAll(PrivilegeConstants.FunctionPrivilege.LOGIN);
         return function;
     }
 }

@@ -8,10 +8,14 @@ package gupao.decorator.v2;
 public class Test {
 
     public static void main(String[] args) {
-        BatterCake batterCake = new BaseBatterCake();
+        BatterCake batterCake;
+        batterCake = new BaseBatterCake();
         System.out.println(batterCake.buy()+"，总价"+batterCake.price());
 
         batterCake = new BatterCakeBaconDecorator(batterCake);
+        System.out.println(batterCake.buy()+"，总价"+batterCake.price());
+
+        batterCake = new BatterCakeEggDecorator(batterCake);
         System.out.println(batterCake.buy()+"，总价"+batterCake.price());
 
         batterCake = new BatterCakeEggDecorator(batterCake);
