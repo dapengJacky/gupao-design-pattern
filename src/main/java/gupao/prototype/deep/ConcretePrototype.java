@@ -33,18 +33,22 @@ public class ConcretePrototype implements Cloneable, Serializable {
 
     public ConcretePrototype deepClone(){
         try {
-            ByteArrayOutputStream bos =new ByteArrayOutputStream();
-            ObjectOutputStream oos = new ObjectOutputStream(bos);
-            oos.writeObject(this);
-            oos.close();
-
-            ByteArrayInputStream bis = new ByteArrayInputStream(bos.toByteArray());
-            ObjectInputStream ois = new ObjectInputStream(bis);
+            ObjectInputStream ois = serialDeepClone(this);
             return (ConcretePrototype)ois.readObject();
         }catch (Exception e){
             e.printStackTrace();
             return null;
         }
+    }
+
+    public static ObjectInputStream serialDeepClone(Object obj) throws IOException {
+        ByteArrayOutputStream bos =new ByteArrayOutputStream();
+        ObjectOutputStream oos = new ObjectOutputStream(bos);
+        oos.writeObject(obj);
+        oos.close();
+
+        ByteArrayInputStream bis = new ByteArrayInputStream(bos.toByteArray());
+        return new ObjectInputStream(bis);
     }
 
     public ConcretePrototype jsonClone(){
