@@ -2,8 +2,6 @@ package gupao.adapter.login.v2;
 
 import gupao.adapter.login.PassportService;
 import gupao.adapter.login.ResultMsg;
-import gupao.adapter.login.v1.IPassportForThirdParty;
-import org.apache.commons.lang.StringUtils;
 
 /**
  * @author peng.chen12@hand-china.com

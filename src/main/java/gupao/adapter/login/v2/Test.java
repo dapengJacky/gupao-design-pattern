@@ -10,5 +10,8 @@ public class Test {
     public static void main(String[] args) {
         PassportAdapter adapter = new PassportAdapter();
         adapter.loginForQQ("fqdaqfqdad");
+
+        ILoginAdapter adapter1 = new LoginForEmailAdapter();
+        adapter1.login("email",adapter1);
     }
 }
