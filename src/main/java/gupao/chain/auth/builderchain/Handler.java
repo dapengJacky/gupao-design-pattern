@@ -11,7 +11,7 @@ public abstract class Handler<T> {
 
     protected Handler next;
 
-    public void nextHandler(Handler next){
+    private void nextHandler(Handler next){
         this.next = next;
     }
 
@@ -21,7 +21,7 @@ public abstract class Handler<T> {
         private Handler<T> head;
         private Handler<T> tail;
 
-        public Builder<T> addHandler(Handler next){
+        public Builder<T> addHandler(Handler<T> next){
             if(head==null){
                 this.head = this.tail=next;
                 return this;

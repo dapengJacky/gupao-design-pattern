@@ -1,9 +1,9 @@
 package gupao.command.player;
 
-import com.gupaoedu.vip.pattern.command.player.actions.PauseAction;
-import com.gupaoedu.vip.pattern.command.player.actions.PlayAction;
-import com.gupaoedu.vip.pattern.command.player.actions.SpeedAction;
-import com.gupaoedu.vip.pattern.command.player.actions.StopAction;
+import gupao.command.player.actions.PauseAction;
+import gupao.command.player.actions.PlayAction;
+import gupao.command.player.actions.SpeedAction;
+import gupao.command.player.actions.StopAction;
 
 /**
  * Created by Tom.

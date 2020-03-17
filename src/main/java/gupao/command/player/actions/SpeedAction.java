@@ -1,7 +1,7 @@
 package gupao.command.player.actions;
 
-import com.gupaoedu.vip.pattern.command.player.GPlayer;
-import com.gupaoedu.vip.pattern.command.player.IAction;
+import gupao.command.player.GPlayer;
+import gupao.command.player.IAction;
 
 /**
  * Created by Tom.
